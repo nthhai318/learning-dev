@@ -12,15 +12,18 @@ const AboutMe = () => {
             <header>
             <h1>About Me</h1>
             </header>   
-            <main>
+            <main id="Intro">
                 <h2>NGO THE HAI</h2>
+                <p>Check me out via <Link href="https://www.facebook.com/ngo.t.hai.97" ><FontAwesomeIcon icon={faFacebook} className="social-icon"/></Link> <Link href="https://twitter.com/HaiNgo87853620"><FontAwesomeIcon icon={faTwitter} className="social-icon" /></Link> <Link href="https://github.com/nthhai318"><FontAwesomeIcon icon={faGit} className="social-icon" /></Link></p> 
                 <Image
                     alt="profile"
-                    src={"profile.jpg"}
+                    src={"/profile.jpg"}
                     width={1000}
                     height={1000}
+                    style={{maxWidth: "100%", height: "auto"}}
+                    id="profile-pic"
                 />
-                <p>Check me out via <Link href="https://www.facebook.com/ngo.t.hai.97" ><FontAwesomeIcon icon={faFacebook} className="social-icon"/></Link> <Link href="https://twitter.com/HaiNgo87853620"><FontAwesomeIcon icon={faTwitter} className="social-icon" /></Link> <Link href="https://github.com/nthhai318"><FontAwesomeIcon icon={faGit} className="social-icon" /></Link></p> 
+                
                 <p>My name is Ngo The Hai. I'm a 29-year old up-and-coming fresher web developer from Hanoi, Vietnam.</p>
                 <p>Although graduated from a Finance background, I have a strong enthusiasm and passion for Internet technology in general, especially web builder. That is why I quit a well-paid financial job to commit fulltime to become a web developer. To me, it is great that there are always new exciting things to learn as the web is constantly evolving and improving.</p>
                 <p>My objective is to create attractive, well-built website, thus deliver exellent experience for the client and contribute to the development of my future employer company</p>
