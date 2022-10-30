@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <Layout>
+        <div id="space" ></div>
         <Component {...pageProps} />
     </Layout>
   )
