@@ -52,7 +52,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-          <Link href='/hai' className={styles.card}>
+          <Link href='/aboutme' className={styles.card}>
             <h2>Hai &rarr;</h2>
             <p>Anh Ip</p>
           </Link>

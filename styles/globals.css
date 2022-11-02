@@ -1,12 +1,12 @@
 /* * {
-  border: 1px solid black;
+  border: 1px solid grey;
 } */
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, Nunito, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -36,12 +36,83 @@ a {
 }
 
 #navbar {
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  flex-direction: row;
   height: 50px;
-  padding: auto;
   position: fixed;
   width: 100vw;
-  background-color: #151a1e;
+  background-color: #151a1eee;
+  justify-content: space-between;
   margin: 0;
+}
+
+#homebutton {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+}
+
+#logo {
+  padding: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow:  0 0 10px aquamarine;
+}
+
+#logo:hover {
+  width: 45px;
+  height: 45px;
+  animation: rotate360 3s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {transform: rotate(0deg); box-shadow: 0 0 10px aquamarine; }
+  50% {transform: rotate(180deg); box-shadow: 0 0 50px aquamarine;}
+  100% {transform: rotate(360deg); box-shadow: 0 0 10px aquamarine;}
+}
+
+#Navigation {
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.navbutton {
+  text-align: center;
+  padding: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  width: 120px;
+}
+
+.navbutton::after{
+  content: '';
+  display: block;
+  border-bottom: 2px solid aquamarine;
+  margin-top: 12px;
+  transform: scale(0);
+  transition: transform 0.2s ease-out
+}
+
+.navbutton:hover::after {
+  transform: scale(1);
+}
+
+.navbutton:hover {
+  color: aquamarine;
+  font-size: 1.1em;
+  animation: text-shadowy 2s ease-in-out infinite
+}
+
+@keyframes text-shadowy {
+  0% {text-shadow: 0 0 30px #afafafee; }
+  50% {text-shadow: 0 0 60px #afafafee;}
+  100% {text-shadow: 0 0 30px #afafafee;}
 }
 
 #space {
@@ -50,15 +121,17 @@ a {
   background-color: transparent;
 }
 
-#navbar h1 {
-  text-align: center;
-  color: white;
-  margin: auto;
-  height: 50px;
+
+header {
+  background-color: #151a1eee;
+  display: flex;
+  height: 120px;
+  padding: 0;
 }
 
 header h1 {
-  text-align: center;
+  color: white;
+  margin: auto;
 }
 
 #Intro {
