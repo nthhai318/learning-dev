@@ -24,7 +24,7 @@ const AboutMe = () => {
                     id="profile-pic"
                 />
                 
-                <p>My name is Ngo The Hai. I'm a 29-year old up-and-coming fresher web developer from Hanoi, Vietnam.</p>
+                <p>My name is Ngo The Hai. I&lsquo;m a 29-year old up-and-coming fresher web developer from Hanoi, Vietnam.</p>
                 <p>Although graduated from a Finance background, I have a strong enthusiasm and passion for Internet technology in general, especially web builder. That is why I quit a well-paid financial job to commit fulltime to become a web developer. To me, it is great that there are always new exciting things to learn as the web is constantly evolving and improving.</p>
                 <p>My objective is to create attractive, well-built website, thus deliver exellent experience for the client and contribute to the development of my future employer company</p>
                 <h3>Technical Tools:</h3>
