@@ -147,3 +147,7 @@ header h1 {
 #Intro h2, #Intro p:first-of-type {
   text-align: center;
 }
+
+.social-icon {
+  size: 30px;
+}
