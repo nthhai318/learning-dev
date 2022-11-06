@@ -1,7 +1,6 @@
 import MovieCard from "./MovieCard";
 import styles from "./movie-card.module.css";
 
-type movies = Array<movie> | null;
 type movie = {
   adult?: boolean;
   backdrop_path?: string;
@@ -24,6 +23,7 @@ export default async function Discover() {
 
   return (
     <>
+      <div className={styles["the-one-behind-all"]}></div>
       <div className="section-header">
         <h1>MOVIE</h1>
       </div>

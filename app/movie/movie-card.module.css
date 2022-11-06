@@ -1,24 +1,37 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
 
-.movie-grid {
-  display: grid;
-  padding: 10px;
-  gap: 10px;
-  font-family: "Montserrat", sans-serif;
+.the-one-behind-all {
+  background: url(https://cdn.fansshare.com/image/moviewallpapers/the-dark-knight-poster-hd-wallpaper-1302612449.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: brightness(0.3);
 }
 
-@media (min-width: 600px) {
+.movie-grid {
+  display: flex;
+  flex-flow: wrap row;
+  padding: auto;
+  margin: auto;
+  align-content: space-around;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+}
+/* 
+@media only screen and (min-width: 600px) {
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
   .movie-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
 .movie-card {
   padding: 5px;
@@ -26,6 +39,7 @@
   background: hsla(260 10% 12%);
   line-height: 0.9;
   color: hsla(36 15% 81%);
+  margin: 5px auto;
 }
 
 .poster {
@@ -51,4 +65,31 @@
   place-content: center;
   place-items: center;
   text-shadow: 0 0 10px black;
+}
+
+.info {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: -6rem;
+}
+
+.release {
+  text-align: center;
+  font-size: small;
+}
+
+.overview {
+  font-size: small;
+  text-align: left;
+  line-height: 1;
+}
+
+.score {
+  position: relative;
+  right: -200px;
+  color: rgb(174, 125, 125);
+}
+
+.score + p {
+  margin-top: -2rem;
 }
