@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
-// https://api.themoviedb.org/3/discover/movie?api_key=af91549c37d23b640b67237ab14a5f04&sort_by=popularity.desc&page=1&with_watch_monetization_types=flatrate
+import "moviecard.module.css";
 
 type movies = Array<movie> | null;
 type movie = {
@@ -52,7 +51,9 @@ const Discover = () => {
         <div className="movie-grid">
           {!movies
             ? ""
-            : movies.map((film) => <MovieCard key={film.title} movie={film} />)}
+            : movies.map((film, index) => (
+                <MovieCard key={index} movie={film} />
+              ))}
         </div>
       </section>
     </>
@@ -60,21 +61,22 @@ const Discover = () => {
 };
 export default Discover;
 
-const MovieCard = (props) => {
+const MovieCard = (props: any) => {
   return (
     <div className="movie-card">
-      <h3>{props.movie.title}</h3>
+      <h3 className="title">{props.movie.title}</h3>
       <Image
+        className="poster"
         loading="lazy"
         src={`https://www.themoviedb.org/t/p/w220_and_h330_face${props.movie.poster_path}`}
         alt={`${props.movie.id}`}
         width={220}
         height={330}
       />
-      <p>{props.movie.release_date}</p>
-      <p>{props.movie.vote_average}</p>
+      <p className="release">{props.movie.release_date}</p>
+      <p className="score">{props.movie.vote_average}</p>
       <p>SUMMARY</p>
-      <p>{props.movie.overview}</p>
+      <p className="overview">{props.movie.overview}</p>
     </div>
   );
 };

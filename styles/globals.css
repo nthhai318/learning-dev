@@ -132,14 +132,5 @@ section h2, section p:first-of-type {
   text-align: center;
 }
 
-.movie-grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
 
-.movie-card {
-  padding: 5px;
-  border-radius: 20px;
-  box-shadow: 0 0 3px 3px #111
-}
+
