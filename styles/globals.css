@@ -6,11 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Nunito, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Nunito, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-
 
 a {
   color: inherit;
@@ -37,7 +35,7 @@ a {
 
 #navbar {
   position: sticky;
-  top:0;
+  top: 0;
   display: flex;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -47,6 +45,7 @@ a {
   background-color: #151a1eee;
   justify-content: space-between;
   margin: 0;
+  z-index: 1000;
 }
 
 #homebutton {
@@ -59,7 +58,7 @@ a {
   padding: 0;
   margin: auto;
   border-radius: 50%;
-  box-shadow:  0 0 10px aquamarine;
+  box-shadow: 0 0 10px aquamarine;
 }
 
 #logo:hover {
@@ -69,27 +68,35 @@ a {
 }
 
 @keyframes rotate360 {
-  0% {transform: rotate(0deg); box-shadow: 0 0 10px aquamarine; }
-  50% {transform: rotate(180deg); box-shadow: 0 0 50px aquamarine;}
-  100% {transform: rotate(360deg); box-shadow: 0 0 10px aquamarine;}
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px aquamarine;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 0 0 50px aquamarine;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 10px aquamarine;
+  }
 }
 
 #Navigation {
   width: 50vw;
   display: flex;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
   color: white;
+  float: right;
 }
 
 .navbutton {
   text-align: center;
+  align-items: flex-end;
   padding: 10px;
   text-transform: capitalize;
   font-weight: 600;
-  width: 120px;
-  margin: auto;
 }
 
 .navbutton:hover {
@@ -100,9 +107,15 @@ a {
 }
 
 @keyframes text-shadowy {
-  0% {text-shadow: 0 0 30px #afafafee; }
-  50% {text-shadow: 0 0 60px #afafafee;}
-  100% {text-shadow: 0 0 30px #afafafee;}
+  0% {
+    text-shadow: 0 0 30px #afafafee;
+  }
+  50% {
+    text-shadow: 0 0 60px #afafafee;
+  }
+  100% {
+    text-shadow: 0 0 30px #afafafee;
+  }
 }
 
 .section-header {
@@ -128,9 +141,7 @@ section {
   margin: auto;
 }
 
-section h2, section p:first-of-type {
+section h2,
+section p:first-of-type {
   text-align: center;
 }
-
-
-

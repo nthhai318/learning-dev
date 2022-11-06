@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
+
+.movie-grid {
+  display: grid;
+  padding: 10px;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 600px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.movie-card {
+  padding: 5px;
+  width: 270px;
+  background: hsla(260 10% 12%);
+  line-height: 0.9;
+  color: hsla(36 15% 81%);
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.overview {
+  text-align: justify;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 0.9;
+  backdrop-filter: blur(7px);
+  position: relative;
+  bottom: 6rem;
+  height: 6rem;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  text-shadow: 0 0 10px black;
+}
