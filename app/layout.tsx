@@ -1,27 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from '../components/Layout'
-import { ReactElement, ReactNode } from 'react'
-import type { NextPage } from 'next'
+import Navbar from "../components/navbar";
+import "../styles/globals.css";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
-
-export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout || ((page:ReactElement) => page)
-
-  return getLayout(
-    <html>
-      <Layout>
-        <div id="space" ></div>
-        <Component {...pageProps} />
-      </Layout>
+export default function RootLayout({
+  // Layouts must accept a children prop.
+  // This will be populated with nested layouts or pages
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
-  )
-
+  );
 }
