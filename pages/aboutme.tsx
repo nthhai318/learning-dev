@@ -3,18 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGit, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { profile } from "console";
 
 
 const AboutMe = () => {
+    const skills = ["HTML", "Javascript", "CSS", "React.js", "SQL"]
+
     return (
         <>
             <header>
             <h1>About Me</h1>
             </header>   
-            <main id="Intro">
+            <section id="Intro">
                 <h2>NGO THE HAI</h2>
-                <p>Check me out via <Link href="https://www.facebook.com/ngo.t.hai.97" ><FontAwesomeIcon icon={faFacebook} className="social-icon"/></Link> <Link href="https://twitter.com/HaiNgo87853620"><FontAwesomeIcon icon={faTwitter} className="social-icon" /></Link> <Link href="https://github.com/nthhai318"><FontAwesomeIcon icon={faGit} className="social-icon" /></Link></p> 
+                <p>Check me out via <Link href="https://www.facebook.com/ngo.t.hai.97" ><FontAwesomeIcon icon={faFacebook} className="social-icon" width="20"/></Link> <Link href="https://twitter.com/HaiNgo87853620"><FontAwesomeIcon icon={faTwitter} className="social-icon" width="20"/></Link> <Link href="https://github.com/nthhai318"><FontAwesomeIcon icon={faGit} className="social-icon" width="20" /></Link>
+                </p> 
                 <Image
                     alt="profile"
                     src={"/profile.jpg"}
@@ -29,11 +31,7 @@ const AboutMe = () => {
                 <p>My objective is to create attractive, well-built website, thus deliver exellent experience for the client and contribute to the development of my future employer company</p>
                 <h3>Technical Tools:</h3>
                 <ul>
-                    <li className="skills">HTML</li>
-                    <li className="skills">Javascript</li>
-                    <li className="skills">CSS</li>
-                    <li className="skills">React.js</li>
-                    <li className="skills">SQL</li>
+                    {skills.map((skill, index) => <li key={index} className="skills">{skill}</li>)}
                 </ul>
                 <h3>Strait and Competitive Edge</h3>
                 <h4>Strength</h4>
@@ -54,7 +52,7 @@ const AboutMe = () => {
                     <li><strong>2015-2018:</strong> Sales Executive of Hanoi Steel Center - in charge of Sales Planning, Purchasing and Stock Control</li>
                 </ul>
                  
-            </main>
+            </section>
         </>
     )
 }
