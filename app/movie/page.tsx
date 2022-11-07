@@ -1,4 +1,3 @@
-import MovieCard from "./MovieCard";
 import styles from "./movie-card.module.css";
 import SearchResult from "./SearchResult";
 import Image from "next/image";
@@ -46,7 +45,7 @@ export default async function Discover() {
   );
 }
 
-export async function getMovies() {
+async function getMovies() {
   // Fetch data from external API
   const res = await fetch(
     `https://api.themoviedb.org/3/discover/movie?api_key=af91549c37d23b640b67237ab14a5f04&sort_by=popularity.desc&page=1&with_watch_monetization_types=flatrate`

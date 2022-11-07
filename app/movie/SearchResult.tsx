@@ -14,9 +14,6 @@ function SearchResult(props: any) {
       .includes(searchKey.toUpperCase());
   });
 
-  console.log(searchKey);
-  console.log(props.data.results);
-  console.log(results);
   return (
     <>
       <div className={styles["search-bar-wrapper"]}>
