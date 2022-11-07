@@ -22,7 +22,7 @@
   padding: auto;
   margin: auto;
   align-content: space-around;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-family: "Montserrat", sans-serif;
 }
 
