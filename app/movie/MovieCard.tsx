@@ -15,7 +15,8 @@ const MovieCard = (props: any) => {
           width={220}
           height={330}
         />
-        <p className={styles["title"]}>{props.movie.title}</p>
+        <div className={styles["title-blur"]}></div>
+        <span className={styles["title"]}>{props.movie.title}</span>
         <div className={styles["info"]}>
           <p className={styles["release"]}>
             Release Date: {props.movie.release_date}

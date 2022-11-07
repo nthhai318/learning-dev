@@ -29,23 +29,21 @@ export default async function Discover() {
       <div className="section-header">
         <h1>MOVIE</h1>
       </div>
-      <section>
-        <div>
-          {/* <input
+      <div>
+        {/* <input
             className={styles["search-bar"]}
             type="text"
             placeholder="Search Movies"
             // value=""
           /> */}
-        </div>
-        <div className={styles["movie-grid"]}>
-          {!data.results
-            ? ""
-            : data.results.map((film: movie, index?: number) => (
-                <MovieCard key={index} movie={film} />
-              ))}
-        </div>
-      </section>
+      </div>
+      <div className={styles["movie-grid"]}>
+        {!data.results
+          ? ""
+          : data.results.map((film: movie, index?: number) => (
+              <MovieCard key={index} movie={film} />
+            ))}
+      </div>
     </>
   );
 }
