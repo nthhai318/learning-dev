@@ -1,8 +1,9 @@
 import MovieCard from "./MovieCard";
 import styles from "./movie-card.module.css";
-import useState from "react";
+import SearchResult from "./SearchResult";
+import Image from "next/image";
 
-type movie = {
+export type movie = {
   adult?: boolean;
   backdrop_path?: string;
   genre_ids?: Array<number>;
@@ -13,7 +14,7 @@ type movie = {
   popularity?: number;
   poster_path: string;
   release_date?: string;
-  title?: string;
+  title: string;
   video?: boolean;
   vote_average?: number;
   vote_count?: number;
@@ -21,29 +22,26 @@ type movie = {
 
 export default async function Discover() {
   const data = await getMovies();
-  // const [searchKey, setSearchKey] = useState<string>(null);
 
   return (
     <>
       <div className={styles["the-one-behind-all"]}></div>
       <div className="section-header">
-        <h1>MOVIE</h1>
+        <div className={styles["movies-header"]}>
+          <h1>MOVIE</h1>
+          <div className={styles["sponsor-logo"]}>
+            <span>WITH</span>
+            <Image
+              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              alt=""
+              width={"1000"}
+              height={"1000"}
+              style={{ height: "1.5rem", width: "auto" }}
+            />
+          </div>
+        </div>
       </div>
-      <div>
-        {/* <input
-            className={styles["search-bar"]}
-            type="text"
-            placeholder="Search Movies"
-            // value=""
-          /> */}
-      </div>
-      <div className={styles["movie-grid"]}>
-        {!data.results
-          ? ""
-          : data.results.map((film: movie, index?: number) => (
-              <MovieCard key={index} movie={film} />
-            ))}
-      </div>
+      <SearchResult data={data} />
     </>
   );
 }

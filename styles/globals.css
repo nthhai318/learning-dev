@@ -50,7 +50,7 @@ a {
   padding-right: 10vw;
   flex-direction: row;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   background-color: #151a1eee;
   justify-content: space-between;
   margin: 0;
@@ -97,12 +97,11 @@ a {
   margin: 0;
   padding: 0;
   color: white;
-  float: right;
+  justify-content: flex-end;
 }
 
 .navbutton {
   text-align: center;
-  align-items: flex-end;
   padding: 10px;
   text-transform: capitalize;
   font-weight: 600;
@@ -132,7 +131,7 @@ a {
   display: flex;
   height: 120px;
   padding: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .section-header h1 {
@@ -154,4 +153,8 @@ section {
 section h2,
 section p:first-of-type {
   text-align: center;
+}
+
+p {
+  text-align: justify;
 }
