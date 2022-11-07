@@ -1,5 +1,6 @@
 import MovieCard from "./MovieCard";
 import styles from "./movie-card.module.css";
+import useState from "react";
 
 type movie = {
   adult?: boolean;
@@ -20,6 +21,7 @@ type movie = {
 
 export default async function Discover() {
   const data = await getMovies();
+  // const [searchKey, setSearchKey] = useState<string>(null);
 
   return (
     <>
@@ -28,6 +30,14 @@ export default async function Discover() {
         <h1>MOVIE</h1>
       </div>
       <section>
+        <div>
+          {/* <input
+            className={styles["search-bar"]}
+            type="text"
+            placeholder="Search Movies"
+            // value=""
+          /> */}
+        </div>
         <div className={styles["movie-grid"]}>
           {!data.results
             ? ""
