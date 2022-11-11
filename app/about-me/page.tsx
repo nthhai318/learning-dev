@@ -1,11 +1,13 @@
 import { LogoLinks } from "../../components/LogoLinks";
 import Image from "next/image";
+import styles from "./Aboutme.module.css";
 
 const skills = ["HTML", "Javascript", "CSS", "React.js", "SQL"];
 
 const AboutMe = () => {
   return (
     <>
+      <div className={styles["aboutme-background-image"]}></div>
       <div className="section-header">
         <h1>About Me</h1>
       </div>

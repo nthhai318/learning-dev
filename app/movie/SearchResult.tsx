@@ -35,8 +35,8 @@ function SearchResult(props: any) {
       <div className={styles["movie-grid"]}>
         {!results
           ? ""
-          : results.map((film: movie, index?: number) => (
-              <MovieCard key={index} movie={film} />
+          : results.map((film: movie) => (
+              <MovieCard key={film.id} movie={film} />
             ))}
       </div>
     </>

@@ -1,0 +1,14 @@
+.aboutme-background-image {
+  background: url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg?w=1380&t=st=1668172103~exp=1668172703~hmac=5d0e229234a5cde7c354e3f99952c82c4aae2df7655e82796430dcffce2d902e)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1000;
+  top: 0;
+  filter: brightness(0.3);
+}
