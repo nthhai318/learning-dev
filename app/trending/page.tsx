@@ -2,8 +2,8 @@
 
 import { use } from "react";
 import Image from "next/image";
-import styles from "./../movie-card.module.css";
-import SearchResult from "../SearchResult";
+import styles from "../movie/movie-card.module.css";
+import SearchResult from "../movie/SearchResult";
 
 async function fetchMovieTrending() {
   // Fetch data from external API
