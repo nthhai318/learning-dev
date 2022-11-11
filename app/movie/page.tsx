@@ -48,7 +48,8 @@ export default async function Discover() {
 async function getMovies() {
   // Fetch data from external API
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=af91549c37d23b640b67237ab14a5f04&sort_by=popularity.desc&page=1&with_watch_monetization_types=flatrate`
+    `https://api.themoviedb.org/3/discover/movie?api_key=af91549c37d23b640b67237ab14a5f04&sort_by=popularity.desc&page=1&with_watch_monetization_types=flatrate`,
+    { next: { revalidate: 3600 } }
   );
   return res.json();
 }

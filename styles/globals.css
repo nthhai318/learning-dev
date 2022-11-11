@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Nunito, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
+  color: hsl(36 15% 81%);
 }
 
 a {
@@ -149,6 +149,7 @@ section {
 
 #profile-pic {
   margin: auto;
+  border-radius: 10px;
 }
 
 section h2,

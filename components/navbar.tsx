@@ -19,6 +19,9 @@ export default function Navbar() {
           <Link href="/movie">Movie</Link>
         </div>
         <div className="navbutton">
+          <Link href="/movie/trending">Trending</Link>
+        </div>
+        <div className="navbutton">
           <Link href="/about-me">About Me</Link>
         </div>
       </div>

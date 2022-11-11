@@ -10,5 +10,5 @@
   width: 100vw;
   z-index: -1000;
   top: 0;
-  filter: brightness(0.3);
+  filter: brightness(1);
 }

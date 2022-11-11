@@ -86,6 +86,10 @@
   color: black;
 }
 
+.brief {
+  color: black;
+}
+
 .card:hover,
 .card:focus,
 .card:active {

@@ -8,8 +8,10 @@ export default function Home() {
         <h1>Welcome to My Page</h1>
       </div>
       <section>
-        <p>This is where I experiment with Nextjs latest features</p>
-        <main className={styles.container}>
+        <p className={styles["brief"]}>
+          This is where I experiment with Nextjs latest features
+        </p>
+        <div className={styles.container}>
           <div className={styles.grid}>
             <Link href="/about-me" className={styles.card}>
               <h2>Hai &rarr;</h2>
@@ -20,7 +22,7 @@ export default function Home() {
               <p>Movies to recommend</p>
             </Link>
           </div>
-        </main>
+        </div>
       </section>
     </>
   );
